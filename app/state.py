@@ -3,6 +3,7 @@ from typing import List
 
 
 class AgentState(TypedDict, total=False):
+    """Состояние агента, которое передается между узлами графа."""
     user_input: str
     intent: str          # food / sport / general
     query: str           # для API

@@ -4,7 +4,7 @@ from app.state import AgentState
 from app.tools import get_food_info, get_exercises
 
 
-ROUTER_PROMPT = """Ты — спортивный и nutritional ассистент.
+ROUTER_PROMPT = """Ты — ассистент по спорту и питанию.
 
 Определи категорию запроса:
 - food — вопросы о продуктах, калориях, БЖУ, питании
