@@ -31,8 +31,12 @@ def chat(req: ChatRequest):
             {"user_input": req.message},
             config=config,
         )
+        
     except Exception as e:
-        raise HTTPException(500, f"Ошибка агента: {e}")
+        import traceback
+        error_details = traceback.format_exc()
+        print(error_details) # Выведет ошибку в терминал
+        raise HTTPException(500, f"Ошибка агента: {e}\n\nДетали: {error_details}")
 
     return ChatResponse(
         answer=result.get("answer", ""),
