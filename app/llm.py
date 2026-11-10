@@ -26,10 +26,10 @@ def llm_call(
     :return: строка (если structure=None) или dict (если structure задана)
     """
     client = GigaChat(
-        credentials=settings.GIGACHAT_KEY,
-        verify_ssl_certs=False,
-        scope=settings.GIGACHAT_SCOPE,
+        access_token=settings.GIGACHAT_KEY,
+        base_url=settings.GIGACHAT_BASE_URL,
         model=settings.GIGACHAT_MODEL,
+        verify_ssl_certs=False,
     )
 
     roles_dict = {
